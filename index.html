@@ -1114,6 +1114,102 @@
             .section-subtitle { font-size: 2rem; }
         }
 
+        /* Sponsor Section Classes */
+        .sponsor-section {
+            padding: 6rem 0;
+            background: #ffffff;
+            position: relative;
+        }
+        
+        .sponsor-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .sponsor-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .sponsor-title {
+            font-size: 2.5rem;
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .sponsor-content {
+            display: grid;
+            gap: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .sponsor-category {
+            background: white;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            box-shadow: 0 10px 25px rgba(249, 171, 0, 0.15);
+            border: 2px solid #ffe7a5;
+            text-align: center;
+        }
+        
+        .sponsor-category-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .book-sponsor {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .book-sponsor strong {
+            color: #f9ab00;
+            font-weight: 700;
+        }
+        
+        .sponsor-logos {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .sponsor-logo-item {
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .sponsor-logo-item:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+        
+        @media (min-width: 640px) {
+            .sponsor-section { padding: 8rem 0; }
+            .sponsor-container { padding: 0 1.5rem; }
+            .sponsor-logos { flex-direction: row; justify-content: center; }
+        }
+        
+        @media (min-width: 768px) {
+            .sponsor-title { font-size: 3rem; }
+        }
+        
+        @media (min-width: 1024px) {
+            .sponsor-container { padding: 0 2rem; }
+            .sponsor-title { font-size: 3.5rem; }
+        }
+
         /* Contact Section Classes */
         .contact-section {
             padding: 6rem 0;
@@ -1628,6 +1724,7 @@
                         <a href="#about" class="nav-link">행사 소개</a>
                         <a href="#cfp" class="nav-link">발표자 모집</a>
                         <a href="#contact" class="nav-link">장소 및 문의</a>
+                        <a href="#sponsor" class="nav-link">후원</a>
                     </nav>
                 </div>
                 <div class="nav-mobile">
@@ -1646,6 +1743,7 @@
                 <a href="#cfp" class="mobile-nav-link">발표자 모집</a>
                 <a href="#schedule" class="mobile-nav-link">일정</a>
                 <a href="#contact" class="mobile-nav-link">장소 및 문의</a>
+                <a href="#sponsor" class="mobile-nav-link">후원</a>
             </div>
         </div>
     </header>
@@ -1932,6 +2030,39 @@
                 </div>
             </div>
         </section>
+
+        <!-- Sponsor Section -->
+        <section id="sponsor" class="sponsor-section">
+            <div class="sponsor-container">
+                <div class="sponsor-header">
+                    <h2 class="sponsor-title">후원</h2>
+                </div>
+                
+                <div class="sponsor-content">
+                    <!-- 도서후원 -->
+                    <div class="sponsor-category">
+                        <h3 class="sponsor-category-title">📚 도서후원</h3>
+                        <p class="book-sponsor">
+                            <strong>박해선님</strong> (AI/Cloud GDE)<br>
+                            DevFest 참가자들을 위한 귀중한 도서를 후원해주셨습니다.
+                        </p>
+                    </div>
+                    
+                    <!-- 일반후원 -->
+                    <div class="sponsor-category">
+                        <h3 class="sponsor-category-title">🤝 후원</h3>
+                        <div class="sponsor-logos">
+                            <div class="sponsor-logo-item">
+                                <img src="./asset/로고1.png" alt="후원사 로고1" style="max-height: 120px; max-width: 300px; object-fit: contain;">
+                            </div>
+                            <div class="sponsor-logo-item">
+                                <img src="./asset/로고2.png" alt="후원사 로고2" style="max-height: 65px; max-width: 200px; object-fit: contain;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -1942,7 +2073,7 @@
                     <div class="footer-logo-icon"></div>
                     <span class="footer-logo-text">DevFest 2025 in Daegu</span>
                 </div>
-                <p class="footer-organizer">주최/후원: GDG Daegu / Google for Developers</p>
+                <p class="footer-organizer">주최: GDG Daegu</p>
                 <p class="footer-copyright">&copy; DevFest 2025 in Daegu. All rights reserved.</p>
             </div>
         </div>
